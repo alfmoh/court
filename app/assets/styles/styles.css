@@ -2,4 +2,6 @@
 @import "base/_global.css";
 @import "base/_variables.css";
 @import "base/_mixins.css";
+@import "modules/_content";
 @import "modules/_description.css";
+@import "modules/_menu.css";

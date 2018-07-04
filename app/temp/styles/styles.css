@@ -341,6 +341,12 @@ template {
   display: none;
 }
 
+.content {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
 .b-desc {
     display: flex;
     flex-direction: column;
@@ -350,31 +356,26 @@ template {
 
 .b-desc__menu-icon {
         margin-right: 2rem;
+        margin-top: 1rem;
         width: 20px;
         height: 19px;
-        position: absolute;
-        z-index: 5;
-        top: 30px;
-        right: 10px;
+        z-index: 2;
         cursor: pointer;
+        align-self: flex-end;
+        margin-bottom: -2rem;
     }
 
-.b-desc__menu-icon::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
+.b-desc__menu-icon__top {
             width: 20px;
             height: 3px;
+            margin: 5px 0;
             background-color: #000;
             -webkit-transform-origin: 0 0;
                     transform-origin: 0 0;
         }
 
 .b-desc__menu-icon__middle {
-            position: absolute;
-            top: 8px;
-            left: 0;
+            margin: 5px 0;
             width: 20px;
             height: 3px;
             background-color: #000;
@@ -382,11 +383,8 @@ template {
                     transform-origin: 0 50%;
         }
 
-.b-desc__menu-icon::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
+.b-desc__menu-icon__last {
+            margin: 5px 0;
             width: 20px;
             height: 3px;
             background-color: #000;
@@ -400,7 +398,7 @@ template {
         margin-bottom: -1rem;
     }
 
-.b-desc__people {
+.b-desc__cards {
         color: #C3AD72;
         margin-bottom: -1rem;
         font-family: 'Markazi Text', serif;
@@ -431,3 +429,64 @@ template {
             color: #0E4361;
             font-size: 2.5rem;
         }
+
+.b-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0F415C;
+}
+
+.b-menu-search {
+        margin-top: 1rem;
+    }
+
+.b-menu-search-input {
+            border: none;
+            outline: 0;
+            background-color: inherit;
+            border-bottom: solid .5px #9A9A9B;
+            font-size: 2.2rem;
+            color: #FFF;
+        }
+
+.b-menu-search-input::-webkit-input-placeholder {
+                color: #FFF;
+                opacity: .3;
+                font-family: 'Markazi Text', serif;
+            }
+
+.b-menu-search-input:-ms-input-placeholder {
+                color: #FFF;
+                opacity: .3;
+                font-family: 'Markazi Text', serif;
+            }
+
+.b-menu-search-input::-ms-input-placeholder {
+                color: #FFF;
+                opacity: .3;
+                font-family: 'Markazi Text', serif;
+            }
+
+.b-menu-search-input::placeholder {
+                color: #FFF;
+                opacity: .3;
+                font-family: 'Markazi Text', serif;
+            }
+
+.b-menu-list {
+        list-style: none;
+        align-self: flex-start;
+        margin-top: 5rem;
+    }
+
+.b-menu-list__item {
+            font-size: 3rem;
+            color: #FFF;
+            cursor: pointer;
+            font-family: 'Markazi Text', serif;
+        }
+
+.b-menu-list__item:hover {
+                background-color: #BD9F5F;
+            }
