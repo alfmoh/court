@@ -340,3 +340,94 @@ template {
 [hidden] {
   display: none;
 }
+
+.b-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.b-desc__menu-icon {
+        margin-right: 2rem;
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        z-index: 5;
+        top: 30px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+.b-desc__menu-icon::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: #000;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+        }
+
+.b-desc__menu-icon__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: #000;
+            -webkit-transform-origin: 0 50%;
+                    transform-origin: 0 50%;
+        }
+
+.b-desc__menu-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: #000;
+            -webkit-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
+        }
+
+.b-desc__logo {
+        font-size: 6.25rem;
+        color: #0E4361;
+        margin-bottom: -1rem;
+    }
+
+.b-desc__people {
+        color: #C3AD72;
+        margin-bottom: -1rem;
+        font-family: 'Markazi Text', serif;
+        font-size: 1.6rem;
+    }
+
+.b-desc__committee {
+        color: #0E4361;
+        margin-bottom: -1rem;
+        font-family: 'Domine', serif;
+    }
+
+.b-desc__head {
+        color: #C3AD72;
+        font-family: 'Markazi Text', serif;
+    }
+
+.b-desc__head-name {
+            font-family: 'Sacramento', cursive;
+        }
+
+.b-desc__essay {
+        max-width: 50%;
+        text-align: center;
+    }
+
+.b-desc__essay::first-letter {
+            color: #0E4361;
+            font-size: 2.5rem;
+        }
