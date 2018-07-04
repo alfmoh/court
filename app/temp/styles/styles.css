@@ -341,11 +341,35 @@ template {
   display: none;
 }
 
-.content {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content {
+    grid-template-columns: 1fr;
+}
+
+.content-show-menu {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+    }
 
 .b-desc {
     display: flex;
@@ -453,11 +477,17 @@ template {
         }
 
 .b-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0F415C;
+    display: none;
 }
+
+.b-menu--visible {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0F415C;
+        -webkit-animation: fade-in 2s ease-in-out;
+                animation: fade-in 2s ease-in-out;   
+    }
 
 .b-menu-search {
         margin-top: 1rem;

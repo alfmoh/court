@@ -1,5 +1,9 @@
 .content {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    &-show-menu {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -1,8 +1,13 @@
 .b-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $lightBlue;
+    display: none;
+    
+    &--visible {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $lightBlue;
+        animation: fade-in 2s ease-in-out;   
+    }
 
     &-search {
         margin-top: 1rem;
