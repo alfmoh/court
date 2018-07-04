@@ -372,6 +372,9 @@ template {
             background-color: #000;
             -webkit-transform-origin: 0 0;
                     transform-origin: 0 0;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         }
 
 .b-desc__menu-icon__middle {
@@ -390,7 +393,26 @@ template {
             background-color: #000;
             -webkit-transform-origin: 0 100%;
                     transform-origin: 0 100%;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         }
+
+.b-desc__menu-icon--close-x .b-desc__menu-icon__top {
+                -webkit-transform: rotate(45deg) scaleX(1.25);
+                        transform: rotate(45deg) scaleX(1.25);
+            }
+
+.b-desc__menu-icon--close-x .b-desc__menu-icon__middle {
+                opacity: 0;
+                -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+            }
+
+.b-desc__menu-icon--close-x .b-desc__menu-icon__last {
+                -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+                        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+            }
 
 .b-desc__logo {
         font-size: 6.25rem;
